@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(1, 3, 52);
+    display: flex;
+    flex-direction: column;
+  
+    
+  }
+ 
+  main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+    margin-left: 50px;
+    display:inline-block;
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  #contacto {
+    text-align: left;
+    width: 50%;
+    
+  }
+ /* ESTO ES EL FOOTER*/
+
+ footer {
+    position:relative;
+    display: flex;
+    width: 100%;
+    padding: 50px 0px;
+    background-color: rgb(23, 23, 24);
+  }
+  
+  .footer__container {
+    display:flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    color:rgb(243, 244, 255);
+    
+   
+  }
+  
+  .newsletter__column {
+    width: 35%;
+    background-color:  rgb(23, 23, 24);
+    text-align: center;
+  }
+  .rrss__column {
+    width: 35%;
+    background-color:  rgb(23, 23, 24);
+    text-align: center;
+  }
+  
+  .radio {
+    display: inline-flex;
+  }
+  
+  #novedades {
+    margin-right: 10px;
+    font-size: small;
+    width: 100%;
+  }
+  .btn {
+    display:inline-block;
+    width:100%;
+    border: none;
+    text-align: center;
+  }
+  .suscribirme {
+    border-radius: 5px;
+    padding: 2px 3px;
+    width: 100%;
+    margin: 3px;
+    cursor: pointer;
+  }
+  #email_footer {
+    background: none;
+    padding: 10px 0 0 0;
+  }
+  
+  
+  .linea1 {
+    border-top: 1px solid rgb(44, 55, 91);
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 30px auto 0 auto;
+  }
+  .linea2 {
+    border-top: 1px solid rgb(44, 55, 91);
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 1px auto 0 auto;
+  }
+  
+  /*ESTO ES LA NAV BAR*/
+  nav {
+    width: 100%;
+  }
+  .navbar-brand {
+    padding-top: 20px;
+    background-color: rgb(23, 23, 24);
+
+  }
+
+  .logo {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 40px;
+    color:rgb(243, 244, 255);
+    padding-bottom: 22px;
+    width: 100%;
+  }
+  .secciones {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    border-color: rgb(44, 55, 91);
+    border-style:ridge;
+    border-width: 1px;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color:rgb(243, 244, 255);
+    padding: 0 5%;
+    
+  
+  }
+
+  ul {
+    
+    width: 100%;
+    text-align: center;
+  }
+  .navbar {
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+  }
+
+  * {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  /*formulario*/
+
+
+  .grilla {
+    display: grid;
+    width: 50%;
+    min-width: 320px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 2.5fr;
+    grid-template-areas:'title title'
+                        'a_1 a_2'
+                        'a_3 a_3'
+                        'a_5 a_5';
+  
+  }
+
+  .nombre {
+    width: 100%;
+    height: 100%;
+    grid-area: a_1;
+    text-align: left;
+  }
+
+  .apellido {
+    width: 100%;
+    height: 100%;
+    grid-area: a_2;
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .email {
+    width: 100%;
+    height: 100%;
+    grid-area: a_3;
+    text-align: left;
+  }
+
+  .text {
+
+    grid-area: a_5;
+    text-align: left;
+    padding:0px;
+  }
+.boton_form {
+  background-color: black;
+  border-color: aqua;
+  border-width: 1px;
+  border-radius: 22px;
+  color: aliceblue;
+  padding: 12px;
+  margin:5px;
+  cursor: pointer;
+}
+  
+
+  #form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #form2 {
+    width: 100%;
+    height: 50%;
+   
+  }
+
+  .main_container {
+    grid-area: title;
+  }
+  
+  h2 {
+    font-size: 3vw;
+    
+  }
