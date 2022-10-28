@@ -28,32 +28,34 @@
         </nav>
     </header>
     <main>
-        <h2>HELLO@THEALLYAGENCY.COM</h2>
-        <p>Contactanos con este formulario:</p>
-        <form id="contacto">
-            <ul class="formul__">
-                <li class="formli__">
-                  <div>
-                    <label class="formlabel__" for="name">Nombre:</label>
-                    <input type="text" id="name" name="user_name">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="user_apellido">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label class="formlabel__" for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="user_mail">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <label class="formlabel__" for="msg">Mensaje:</label>
-                        <textarea id="msg" name="user_message"></textarea>
-                    </div>
-                </li>
-               </ul>
+        <div class="grilla">
+            <div class="main_container">
+                <h2>HELLO@THEALLYAGENCY.COM</h2>
+                <p>Contactanos con este formulario:</p>
+            </div>
 
+
+            <div class="nombre">
+                <label id="nombre">Nombre: </label>
+                <input type="text" id="form" name="user_name">
+            </div>
+            <div class="apellido">
+                <label id="apellido">Apellido: </label>
+                <input style="width:100%;" type="text" id="form" name="user_apellido">
+            </div>
+
+            <div class="email">
+                <label id="email">E-mail: </label>
+                <br>
+                <input type="email" id="form2" name="user_mail">
+            </div>
+            <div class="text">
+                <label id="text">Su mensaje: </label>
+                <textarea id="form2" name="user_message">                </textarea>
+                <button class="boton_form">Enviar</button>
+            </div>
+            
+        </div>
         </form>
 
 
