@@ -6,10 +6,41 @@
 
 /*Kit de estilos del Documento*/
 
-$acento__color: #5D2A42;
-$acento2__color: #d8dcff;
-$acento3__color: #aeadf0;
+$acento__color: #bf7cea;
+$acento2__color:white;
+$acento3__color: #d8dcff;
 $texto_fuerte: #151515;
+
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    opacity: 1
+  }
+}
 
 @mixin botones ($color, $bkg_color) {
   color: $color;
@@ -42,14 +73,19 @@ nav {
 
 .logo {
   text-align: center;
-  font-family: 'Barlow', sans-serif;
-  font-size: 40px;
-  color: $texto_fuerte;
-  padding-bottom: 22px;
-  padding-top: 22px;
-  width: 100%;
+  background-color: black;
+  color: white;
+
+  h1 {
+    margin: 0;
+    padding: 15px;
+    font-family: 'Philosopher', sans-serif;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+  }
 
 }
+
 
 .secciones {
   display: flex;
@@ -75,7 +111,7 @@ nav {
       a {
         text-decoration: none;
         cursor: pointer;
-        color: $acento2__color;
+        color: white;
         padding: 0 5%;
       }
     }
@@ -89,177 +125,144 @@ nav {
 
 
 /*BODY del home*/
+.fondo_index {
+  background-image: url(../img/fondo.png);
+  background-repeat: no-repeat;
+}
 
-body {
-  font-family: 'Barlow', Helvetica, sans-serif;
-  background-color: $acento3__color;
-  display: flex;
-  flex-direction: column;
+.index__conteiner {
+  display: grid;
+  min-width: 320px;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-areas: "cuadro__1 cuadro__2 cuadro__2"
+    "cuadro__4 cuadro__4 cuadro__4"
+    "cuadro__7 cuadro__7 cuadro__9"
+}
+
+.tictac {
+  width: 100%;
+  height: auto;
+
+
+
+  h1 {
+    font-size: 3vw;
+    font-family: 'Philosopher', sans-serif;
+    padding: 6%;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+
+  }
 
 }
 
-.contenedor {
+
+
+
+.cuadro__1 {
   width: 100%;
-  height: 10%;
+  height: 100%;
+  grid-area: cuadro__1;
   display: flex;
   align-items: center;
-  background-image: url("../img/1805-colores-pastel.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  img {
-    width: 100%;
-    height: 50%;
-    justify-content: center;
-  }
-
-  /*Texto encima*/
-  .texto_encima {
-    padding: 2.5vw;
-   @media screen and (max-width: 768px) {
-     width: 100%;
-    }
-    @media screen and (min-width: 768px) {
-      width: 50%;
-    }
-    color: $texto_fuerte;
-    left: 5%;
-    
-
-    button {
-      padding: 8px 20px;
-      border-radius: 20px;
-      margin-top: 20px;
-      background-color: $acento__color;
-      border-color: $acento3__color;
-      color: $acento3__color;
-      cursor: pointer;
-    }
-  }
-}
-
-
-@media (max-width: 768px) {
-  
-  .card-middle__index {
-    margin: 20px;
-  }
-
-  .row__index {
-    margin: auto;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .column__index {
-    padding: 10px;
-  }
-
-  .card__index {
-    width: 33.3%;
-    font-size: 2.5vw;
-    height: 5rem;
-  }
-}
-
-
-@media (max-width: 480px) {
-
-  .card-middle__index {
-    margin: 20px;
-  }
-
-  .row__index {
-    margin: auto;
-    width: 100%;
-  }
-
-  .column__index {
-    padding: 5px;
-  }
-
-  .card__index {
-    width: 33.3%;
-    font-size: 2.5vw;
-    height: 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .card-middle__index {
-    width: 50%;
-    margin: auto;
-  }
-
-  .row__index {
-    margin: 40px auto 40px;
-    width: 50%;
-  }
-
-  .column__index {
-    padding: 5px;
-  }
-
-  .card__index {
-    font-size: 1.3vw;
-    height: 6rem;
-  }
-}
-
-
-/*CARDS*/
-
-.row__index {
-  display: block;
   text-align: center;
+  margin: 0 auto;
 
-  .column__index {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    float: left;
-    width: 33.33%;
+  p {
+    margin-bottom: auto;
+  }
 
-    .card__index {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      text-align: center;
-      background-color: $acento__color;
-      margin: 20px auto 20px;
-      border-radius: 15px;
-      color: $acento3__color;
-      width: 100%;
-
-      .card-body {
-        padding: 1rem;
-      }
-
-    }
+  #grulla_svg {
+    text-align: center;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    -moz-filter: invert(100%);
+    filter: invert(100%);
   }
 }
 
-.card-middle__index {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  display: block;
+.cuadro__2 {
+  width: 100%;
+  height: 100%;
+  padding: 6%;
+  grid-area: cuadro__2;
+  color: white;
+  text-shadow: grey 0.01em 0.05em 0.9em;
+
+}
+
+
+
+.cuadro__4 {
+  width: 100%;
+  height: 100%;
+  grid-area: cuadro__4;
+  display: flex;
+  align-items: center;
   text-align: center;
-  color: $acento3__color;
-  margin-top: 20px;
-  background-color: $acento__color;
-  border-radius: 15px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  color: white;
+  text-shadow: grey 0.01em 0.05em 0.2em;
 
-  h3 {
-    font-family: 'Barlow', sans-serif;
-    padding-bottom: 35px;
-    font-size: large;
+  p {
+    margin: 0;
+    font-size: larger;
   }
 }
+
+
+.cuadro__7 {
+  width: 100%;
+  height: 100%;
+  grid-area: cuadro__7;
+}
+
+
+.cuadro__9 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  grid-area: cuadro__9;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: auto;
+  }
+
+  #grulla_svg_v {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+    transform: scaleX(-1);
+    -moz-filter: invert(100%);
+    filter: invert(100%);
+  }
+}
+
+
+
 
 /*La agencia*/
+.la__agencia__fondo {
+  width: 100%;
+  background-image: url(../img/fondo.png);
+  background-size: cover cover;
+  background-repeat: no-repeat;
+}
+
+.footer_laagencia {
+  margin: 0;
+}
 
 .la__agencia {
   width: 100%;
-  margin-top: 20px;
 
   .box {
     width: 50%;
@@ -271,7 +274,7 @@ body {
       margin: 0 auto;
       text-align: center;
       color: $acento2__color;
-      font-family: 'Barlow', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-size: 40px;
     }
 
@@ -303,18 +306,21 @@ body {
   justify-content: center;
   place-items: center;
   perspective: none;
-    @media screen and (max-width: 768px) {
-      display: block;
-     }
-     @media screen and (min-width: 768px) {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: 30% 30% 30%;
-      grid-template-rows: 50% 50%;
-      grid-template-areas: 'servicio1 servicio2 servicio3'
-        'servicio4 servicio5 servicio6';
-     }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'servicio1 servicio2 servicio3'
+      'servicio4 servicio5 servicio6';
+  }
+
   margin: 15px 0 15px 0;
 
   .flip_card {
@@ -322,15 +328,17 @@ body {
       width: 90%;
       height: 200px;
       margin: 0px auto 20px auto;
-     }
-     @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 768px) {
       width: 200px;
       height: 200px;
       margin: 5px;
-     }
+    }
+
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s;    
+    transition: transform 0.8s;
 
   }
 
@@ -346,7 +354,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: $acento2__color;
+  background: $acento__color;
   border-radius: 20px;
 }
 
@@ -388,12 +396,12 @@ body {
 
 .flip_card_back {
   transform: rotateY(180deg);
-  background: $acento2__color;
+  background: $acento3__color;
   transition: box-shadow 600ms;
-  box-shadow: 1px 1px 30px -5px $acento2__color;
+  box-shadow: 1px 1px 30px -5px $texto_fuerte;
   text-align: center;
   border-radius: 15px;
-  
+
 }
 
 .flip_body_card_front {
@@ -404,11 +412,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $acento3__color;
+  color: $acento2__color;
   transform: translateZ(60px);
 
   h3 {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: large;
   }
 }
@@ -423,12 +431,14 @@ body {
   border: none;
   padding: 10px;
   color: $texto_fuerte;
+
   @media screen and (max-width: 768px) {
     font-size: 16px;
-   }
-   @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 768px) {
     font-size: 11px;
-   }
+  }
 
 }
 
@@ -436,9 +446,21 @@ body {
 
 /*formulario*/
 
+.grullas {
+  background: url(../img/fondo.png);
+  background-size: cover cover;
+  background-repeat: no-repeat;
+
+  .grulla_rosa {
+    background-image: url(../img/grulla.png);
+    background-position: center;
+    background-size: cover;
+
+  }
+}
 
 .grilla {
-  color: white;
+  color: $texto_fuerte;
   display: grid;
   min-width: 320px;
   grid-template-columns: 50% 50%;
@@ -511,68 +533,35 @@ body {
 
 /*BLOG*/
 
-.blog_conteiner {
-  display: grid;
-  width: 100%;
-  height: auto;
-  min-width: 360px;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: 'blog1 search'
-    'blog2 empty';
-    
-  .section_1 {
-  grid-area: blog1;
-  padding: 22px;
-  text-align: justify;
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-
+.sr-only {
+  border: 2px solid #151515;
 }
 
-.section_2 {
-  grid-area: blog2;
-  padding: 22px;
-  text-align: justify;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
+.footer_blog {
+  margin: 0;
 }
-
-.search_bar {
-  grid-area: search;
-  padding: 0;
-  display: inline-block;
-}
-
-.input_search {
-  width: 65%;
-  background-color: $acento2__color;
-  border: none;
-}
-
-.btn_search_blog {
-  @include botones($texto_fuerte, $acento3__color);
-
-}
-
-}
-
 
 /* ESTO ES EL FOOTER*/
+.contenedor_footer {
+  margin: 0;
+}
+
+.contacto {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 50px 0px;
+  background-color: rgb(23, 23, 24);
+}
 
 footer {
   position: relative;
   display: flex;
   width: 100%;
-  margin-top: 40px;
-  padding: 50px 0px;
-  background-color: rgb(23, 23, 24);
+  padding: 20px 0px;
+  background-color: $texto_fuerte;
+
 }
 
 .footer__container {
@@ -625,7 +614,7 @@ footer {
 
   .grilla {
     width: 80%;
-    margin: 20px auto;
+    margin: auto;
   }
 
   .main_container {
@@ -654,7 +643,7 @@ footer {
 
   .grilla {
     width: 50%;
-    margin-top: 20px;
+    
     margin-left: 20px;
   }
 
