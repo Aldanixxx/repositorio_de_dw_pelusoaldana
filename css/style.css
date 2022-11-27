@@ -92,7 +92,8 @@ nav {
     backdrop-filter: blur(5px); }
     @media screen and (max-width: 768px) {
       .tictac h1 {
-        font-size: 26px; } }
+        font-size: 26px;
+        color: #151515; } }
 
 .cuadro__1 {
   width: 100%;
