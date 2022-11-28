@@ -70,8 +70,12 @@ nav {
 
 /*BODY del home*/
 .fondo_index {
-  background-image: url(../img/fondo.png);
-  background-repeat: no-repeat; }
+  background-color: #8EC5FC;
+  background-image: linear-gradient(225deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%); }
+  @media screen and (max-width: 768px) {
+    .fondo_index {
+      background-image: url(../img/fondo.png);
+      background-repeat: no-repeat; } }
 
 .index__conteiner {
   display: grid;
@@ -162,10 +166,12 @@ nav {
 
 /*La agencia*/
 .la__agencia__fondo {
-  width: 100%;
-  background-image: url(../img/fondo.png);
-  background-size: cover cover;
-  background-repeat: no-repeat; }
+  background-color: #8EC5FC;
+  background-image: linear-gradient(225deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%); }
+  @media screen and (max-width: 768px) {
+    .la__agencia__fondo {
+      background-image: url(../img/fondo.png);
+      background-repeat: no-repeat; } }
 
 .footer_laagencia {
   margin: 0; }
@@ -311,9 +317,12 @@ nav {
 
 /*formulario*/
 .grullas {
-  background: url(../img/fondo.png);
-  background-size: cover cover;
-  background-repeat: no-repeat; }
+  background-color: #8EC5FC;
+  background-image: linear-gradient(225deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 100%); }
+  @media screen and (max-width: 768px) {
+    .grullas {
+      background-image: url(../img/fondo.png);
+      background-repeat: no-repeat; } }
   .grullas .grulla_rosa {
     background-image: url(../img/grulla.png);
     background-position: center;
